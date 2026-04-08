@@ -1,0 +1,11 @@
+-- Top 5 produtos mais lucrativos
+SELECT Produto, SUM(Lucro) AS lucro_total
+FROM vendas
+GROUP BY Produto
+ORDER BY lucro_total DESC
+LIMIT 5;
+
+-- Receita por região
+SELECT Regiao, SUM(Receita) AS receita_total
+FROM vendas
+GROUP BY Regiao;
